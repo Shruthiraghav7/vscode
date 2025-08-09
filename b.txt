@@ -1,0 +1,35 @@
+
+# String editing utility functions
+
+def remove_whitespace(text):
+    """Remove all whitespace from a string"""
+    return "".join(text.split())
+
+def capitalize_words(text):
+    """Capitalize first letter of each word in string"""
+    return " ".join(word.capitalize() for word in text.split())
+
+def reverse_string(text):
+    """Reverse characters in a string"""
+    return text[::-1]
+
+def replace_substring(text, old, new):
+    """Replace all occurrences of old substring with new substring"""
+    return text.replace(old, new)
+
+def truncate_string(text, length):
+    """Truncate string to specified length with ellipsis"""
+    return text[:length] + "..." if len(text) > length else text
+
+def remove_special_chars(text):
+    """Remove special characters from string"""
+    return "".join(c for c in text if c.isalnum() or c.isspace())
+
+def count_words(text):
+    """Count number of words in string"""
+    return len(text.split())
+
+def to_lowercase(text):
+    """Convert string to lowercase"""
+    return text.lower()
+
